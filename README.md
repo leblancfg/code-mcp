@@ -31,13 +31,13 @@ $ uv run python deploy_gcf.py
 ### As an MCP Server
 
 ```console
-$ python main.py
+$ uv run python main.py
 ```
 
 ### Running Tests
 
 ```console
-$ pytest
+$ uv run pytest
 ```
 
 ### Testing with the MCP Inspector

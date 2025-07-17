@@ -1,0 +1,28 @@
+[project]
+name = "code-mcp"
+version = "0.1.0"
+description = "MCP server for code interpretation via Google Cloud Functions"
+readme = "README.md"
+requires-python = ">=3.11"
+dependencies = [
+    "mcp[cli]>=1.11.0",
+    "google-cloud-functions>=1.16.0",
+    "google-auth>=2.34.0",
+    "requests>=2.32.0",
+    # Dev
+    "pytest>=8.3.0",
+    "pytest-asyncio>=0.24.0",
+    "pytest-mock>=3.14.0",
+    "flask>=3.1.0",
+]
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project.scripts]
+code-mcp = "src.code_mcp.server:main"
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+asyncio_mode = "auto"

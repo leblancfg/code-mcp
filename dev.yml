@@ -1,0 +1,11 @@
+name: code-mcp
+
+type: python
+
+up:
+  - uv
+
+commands:
+  setup: python deploy_gcf.py
+  server: python main.py
+  test: pytest . -v

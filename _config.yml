@@ -1,5 +1,5 @@
 # Jekyll configuration for GitHub Pages
 theme: minima
-title: Code MCP
+title: ""
 description: MCP server for code interpretation via Google Cloud Functions
 show_downloads: true

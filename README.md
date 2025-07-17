@@ -16,22 +16,28 @@ An MCP (Model Context Protocol) server that provides code interpretation capabil
 
 ## Installation
 
-```bash
-pip install -e ".[dev]"
+```console
+$ pip install -e ".[dev]"
 ```
 
 ## Usage
+You'll first need to set up a Google Cloud Function that can execute code. The server will handle requests to this function. In this repo, run it with
+
+```console
+$ uv run python deploy_gcf.py
+```
+
 
 ### As an MCP Server
 
-```bash
-python main.py
+```console
+$ python main.py
 ```
 
 ### Running Tests
 
-```bash
-pytest
+```console
+$ pytest
 ```
 
 ### Testing with the MCP Inspector
@@ -52,8 +58,8 @@ npx @modelcontextprotocol/inspector@0.11.0 \
 
 Set the `GCF_URL` environment variable to use an existing Cloud Function, otherwise the server will attempt to deploy one automatically.
 
-```bash
-export GCF_URL="https://region-project.cloudfunctions.net/code-interpreter"
+```console
+$ export GCF_URL="https://region-project.cloudfunctions.net/code-interpreter"
 ```
 
 ## Architecture
